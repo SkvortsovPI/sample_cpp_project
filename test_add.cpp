@@ -1,5 +1,4 @@
 #include <gtest/gtest.h>
-
 #include "include/my_add.hpp"
 
 TEST(Add, Simple) {
