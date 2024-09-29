@@ -19,3 +19,7 @@ target_link_libraries(tests gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(tests)
+
+find_package(benchmark REQUIRED)
+add_executable(benchmark benchmark.cpp src/my_add.cpp)
+target_link_libraries(benchmark benchmark::benchmark)
