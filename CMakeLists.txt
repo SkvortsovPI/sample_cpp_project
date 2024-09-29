@@ -25,6 +25,8 @@ FetchContent_Declare(
     GIT_REPOSITORY https://github.com/google/benchmark.git
     GIT_TAG main
 )
+FetchContent_MakeAvailable(benchmark)
+
 find_package(benchmark REQUIRED)
 add_executable(benchmark benchmark.cpp src/my_add.cpp)
 target_link_libraries(benchmark benchmark::benchmark)
