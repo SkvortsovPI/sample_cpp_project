@@ -21,11 +21,11 @@ include(GoogleTest)
 gtest_discover_tests(tests)
 
 FetchContent_Declare(
-    benchmark
+    googlebenchmark
     GIT_REPOSITORY https://github.com/google/benchmark.git
     GIT_TAG main
 )
-FetchContent_MakeAvailable(benchmark)
+FetchContent_MakeAvailable(googlebenchmark)
 
-add_executable(benchmark benchmark.cpp src/my_add.cpp)
-target_link_libraries(benchmark benchmark::benchmark)
+add_executable(my_benchmark benchmark.cpp src/my_add.cpp)
+target_link_libraries(my_benchmark benchmark::benchmark)
